@@ -1,0 +1,240 @@
+body {
+    font-family: 'Pacifico', cursive; /* Fonte manuscrita para todo o corpo */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4bb2d1, #4bb2d1); /* Gradiente  */
+    text-align: justify;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background: linear-gradient(to bottom, #4bb2d1, #4bb2d1); /* Gradiente azul */
+    color: #fff;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    text-align: left;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .sidebarMenu {
+    list-style-type: none;
+    padding: 0 5;
+  }
+  
+  .sidebarMenu li {
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', cursive; 
+    color: #070abb;
+
+  }
+
+  #toggleSidebar {
+    background-color: #4bb2d1;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Certifica-se de que o botão esteja acima de outros elementos */
+    border-radius: 5px;
+  }
+  
+  #toggleSidebar:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    flex: 1;
+    background-color: #f0f0f0; /* ou a cor desejada */
+    transition: background-color 0.3s ease; /* adicione uma transição suave para uma mudança de cor gradual */
+
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4bb2d1; /* Cor de fundo do cabeçalho */
+    padding: 10px;
+  }
+
+  .header button,
+h1,
+h2 {
+  font-family: 'Pacifico', cursive;}
+
+  h1 {
+    font-family: 'Poppins', sans-serif; /* Escolha a fonte arredondada desejada */
+    font-size: 40px; /* Tamanho da fonte */
+    background: linear-gradient(to bottom, #2b34b3 50%, #0a0b5a 50%); 
+    -webkit-background-clip: text; /* Clip de texto para aplicar o gradiente de fundo */
+    background-clip: text;
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    margin: 20 0; 
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    color: rgb(2, 29, 29);
+  }
+
+  p {
+    text-align: justify;
+    
+  }
+  
+  .main {
+    padding: 20px;
+  }
+  
+  .contacts-list {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #toggleSidebar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+  
+  #playPause {
+    cursor: pointer;
+  }
+  
+  
+
+#increaseFont,
+#decreaseFont {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+  }
+
+  
+ /* Estilização do botão de play/pause */
+#controls {
+    position: absolute;
+    top: 10px;
+    right: 130px; /* Posição ajustada para deixar espaço para os botões de aumentar/diminuir fonte */
+    z-index: 999;
+    cursor: pointer;
+    background-color: #4bb2d1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+
+  #play-button,
+#pause-button {
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre os botões */
+    top: 5px; /* Define a distância do topo */
+    right: 120px; /* Ajusta a posição para deixar espaço para os botões de aumentar/diminuir fonte */
+    background-color: #4bb2d1; /* Define a cor de fundo dos botões */
+    color: #fff; /* Define a cor do texto dos botões */
+    border: none; /* Remove as bordas */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+}
+  
+  /* Estilização dos botões de aumentar e diminuir a fonte */
+  #increaseFont {
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: #4bb2d1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  } 
+
+  #decreaseFont {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: #4bb2d1;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+
+.footer {
+    background-color: #4bb2d1;
+    color: #070abb;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', cursive; 
+
+  }
+
+  .footer p {
+    text-align: center;
+  }
+  
+  .contacts {
+    margin-top: 20px;
+  }
+  
+  .contacts-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contacts-list li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .contacts-list li:last-child {
+    margin-right: 0;
+  }
+  
+  .contacts-list li a {
+    color: #070abb;
+    text-decoration: none;
+  }
+
+  .contacts-list li a:hover {
+    color: #4994f7;
+    text-decoration: underline;
+  }
+  
+  
